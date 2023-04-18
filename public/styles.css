@@ -1,0 +1,202 @@
+:root{
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+    --Light-Grayish-Violet-bg: hsl(270, 20%, 96%);
+    --button: hsl(200, 45%, 74%);
+    --Moderate-Violet: hsl(276, 55%, 52%);
+    --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    --Grayish-Blue: hsl(206, 6%, 79%);
+    --Pale-Violet: hsl(276, 100%, 81%);
+    --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+}
+
+body{
+    background-color: var(--Light-Grayish-Violet-bg);
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    height: 100vh;
+    width: 100vw;
+}
+
+.login{
+    background-color:hsl(278, 12%, 87%);
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px var(--Grayish-Blue);
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    flex-direction: column;
+    padding: 1rem;
+    height: 200px;
+    width: 350px;
+    text-align: center;
+}
+
+.login h1{
+    color: var(--Light-Violet);
+}
+
+#username{
+    border: 2px solid var(--Pale-Violet);
+    border-radius: 5px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    padding:0.8rem 1rem;
+    width:80%;
+}
+
+#username:focus{
+    outline: none;
+}
+
+#username::placeholder{
+    color: var(--Grayish-Blue);
+}
+
+#join-btn{
+    background-color: var(--Very-Dark-Desaturated-Violet);
+    border-width: 0;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    width:200px;
+}
+
+#join-btn:hover{
+    background-color: transparent;
+    border:3px solid hsl(24, 88%, 53%);
+    color: hsl(24, 88%, 53%);
+}
+
+.top{
+    background: linear-gradient(to right, var(--Light-Magenta) 55%, var(--Light-Violet));
+    border-radius: 0 0 15px 15px;
+    color:var(--Very-Dark-Desaturated-Violet);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#icon{
+    border: 2px solid var(--Grayish-Blue);
+    border-radius: 50%;
+    width:50px;
+}
+
+.chatroom{
+    display: none;
+}
+
+.message-conatiner{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    height: 68vh;
+    margin-bottom: 1.5rem;
+    overflow-y: auto;
+}
+
+.messages{
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 0.5rem;
+    width: 400px;
+}
+
+.msg-sender{
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.msg{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.recieved{
+    background-color: hsl(270, 20%, 92%);
+    color:var(--Moderate-Violet);
+    position: relative;
+}
+
+.recieved::before{
+    content: "";
+    background-color: hsl(270, 20%, 92%);
+    border-radius: 4px 0 0 0;
+    transform: rotate(85deg);
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: -2px;
+}
+
+.sent{
+    align-self: flex-end;
+    background-color: white;
+    color:var(--Desaturated-Dark-Violet);
+    box-shadow: 4px 4px 2px  var(--Grayish-Blue);
+    position: relative;
+}
+
+.sent::after{
+    content: "";
+    box-shadow: 4px 4px 2px var(--Grayish-Blue);
+    background-color: white;
+    border-radius: 0 4px 4px 4px;
+    transform: rotate(10deg);
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    right: 3px;
+    bottom: -2px;
+}
+
+.input-msg{
+    display: flex;
+    align-items: center;
+    padding-left:2rem;
+    position: relative;
+}
+
+#user-msg{
+    box-shadow: 0 0 5px 2px var(--Grayish-Blue);
+    border-radius: 30px;
+    border-width:0;
+    color: hsl(276, 43%, 62%);
+    font-size: 16px;
+    padding:1rem 1.2rem;
+    width: 60%;
+    white-space: initial;
+}
+
+#user-msg:focus{
+    outline: none;
+}
+
+#user-msg::placeholder{
+    color: var(--Grayish-Blue);
+    font-size: 16px;
+}
+
+#submit-btn{
+    border-width: 0;
+    background-color: var(--button);
+    border-radius: 50%;
+    background-image: url(./images/arrow-head.svg);
+    position: absolute;
+    left: 60.3%;
+    height: 40px;
+    width: 40px;
+}

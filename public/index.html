@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat-Application</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <form class="login">
+            <h1>Join Chatroom</h1>
+            <input id="username" type="text" placeholder="Enter user name...">
+            <input id="join-btn" type="button" value="Join">
+        </form>
+
+        <div class="chatroom">
+            <div class="top">
+                <img id="icon" src="images/user.svg">
+                <h1>Chatroom</h1>
+            </div>
+            
+            <div class="message-conatiner">
+                <!-- <div class="messages recieved">
+                    <p class="msg-sender"></p>
+                    <p class="msg"></p>
+                </div> -->
+                <!-- <div class="messages sent">
+                    <p class="msg-sender"></p>
+                    <p class="msg"></p>
+                </div> -->
+            </div>
+    
+            <div class="input-msg">
+                <input id="user-msg" type="text" placeholder="Type a message...">
+                <input id="submit-btn" type="button">
+            </div>
+        </div>
+    </main>
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
